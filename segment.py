@@ -30,7 +30,7 @@ def GNN_seg(mode, cut, alpha, epoch, K, pretrained_weights, in_dir, out_dir, sav
     ##########################################################################################
     # Dino model init
     ##########################################################################################
-    extractor = ViTExtractor('dino_vits8', stride, model_dir=pretrained_weights, device=device)
+    extractor = ViTExtractor('dino_vitb16', stride, model_dir=pretrained_weights, device=device)
     # VIT small feature dimension, with or without log bin
     if not log_bin:
         feats_dim = 384
